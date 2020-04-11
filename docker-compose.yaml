@@ -1,0 +1,49 @@
+version: '3'
+services:
+  sports_data_crawler:
+    build:
+      context: ./
+      dockerfile: ./build/Dockerfile
+    image: allensyk/sports_data_crawler:0.3
+    container_name: crawler
+    environment:
+      DB_HOST: 192.168.31.73
+      DB_PORT: 3306
+      DB_USERNAME: allen
+      DB_PASSWORD: aldbpw
+
+  simple_sports_data_analyzer:
+    build:
+      context: ./
+      dockerfile: ./build/Dockerfile
+    image: allensyk/simple_sports_data_analyzer:0.4
+    container_name: analyzer
+    environment:
+      DB_HOST: 192.168.31.73
+      DB_PORT: 3306
+      DB_USERNAME: allen
+      DB_PASSWORD: aldbpw
+
+  nosql_converter:
+    build:
+      context: ./
+      dockerfile: ./build/Dockerfile
+    image: allensyk/nosql_converter:0.3
+    container_name: converter
+    environment:
+      DB_HOST: 192.168.31.73
+      DB_PORT: 3306
+      DB_USERNAME: allen
+      DB_PASSWORD: aldbpw
+      MONGO_HOST: 192.168.31.73
+      MONGO_PORT: 27017
+
+  myadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: myadmin
+    environment:
+      PMA_HOST: 192.168.31.73
+      PMA_PORT: 3306
+    ports:
+      - 8080:80
+
