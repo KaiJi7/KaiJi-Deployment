@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: ./build/Dockerfile
-    image: allensyk/sports_data_crawler:0.3
+    image: allensyk/sports_data_crawler:0.5
     container_name: crawler
     environment:
       DB_HOST: 192.168.31.73
