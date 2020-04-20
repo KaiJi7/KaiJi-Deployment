@@ -28,7 +28,7 @@ services:
     build:
       context: ./
       dockerfile: ./build/Dockerfile
-    image: allensyk/nosql_converter:0.3
+    image: allensyk/nosql_converter:0.4
     container_name: converter
     environment:
       DB_HOST: 192.168.31.73
