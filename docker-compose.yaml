@@ -16,7 +16,7 @@ services:
     build:
       context: ./
       dockerfile: ./build/Dockerfile
-    image: allensyk/simple_sports_data_analyzer:0.4
+    image: allensyk/simple_sports_data_analyzer:0.6
     container_name: analyzer
     environment:
       DB_HOST: 192.168.31.73
