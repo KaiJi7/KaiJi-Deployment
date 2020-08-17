@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: crawl-conf
+  name: crawler-conf
   namespace: default
 data:
   config.yaml: |
@@ -23,7 +23,7 @@ data:
 
     mongoDb:
       db: kais
-      host: "{{ .Values.config.mongodb.host }}"
-      port: {{ .Values.config.mongodb.port }}
-      username: "{{ .Values.config.mongodb.username }}"
-      password: "{{ .Values.config.mongodb.password }}"
+      host: "{{ .Values.config.mongoDb.host }}"
+      port: {{ .Values.config.mongoDb.port }}
+      username: "{{ .Values.config.mongoDb.username }}"
+      password: "{{ .Values.config.mongoDb.password }}"
