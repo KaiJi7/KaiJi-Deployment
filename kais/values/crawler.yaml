@@ -1,6 +1,6 @@
 image:
   repository: allensyk/sports_data_crawler
-  tag: 0.2.1
+  tag: 0.2.2
 
 config:
   log:
