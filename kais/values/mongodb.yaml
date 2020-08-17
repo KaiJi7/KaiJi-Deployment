@@ -3,9 +3,10 @@ service:
   nodePort: 32323
 
 auth:
-  username: allen
-  password: password
-  database: kids
+  enabled: false
+  # username: allen
+  # password: password
+  # database: kais
 
 persistence:
   enabled: false

@@ -11,7 +11,7 @@ config:
 
   mongoDb:
     db: kais
-    host: mongo.default.svc.cluster.local
+    host: mongodb.default.svc.cluster.local
     port: 27017
-    username: allen
-    password: password
+    username: 
+    password: 
