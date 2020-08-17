@@ -6,6 +6,8 @@ metadata:
   namespace: default
 data:
   config.yaml: |
+    dateFormat: '%Y%m%d'
+
     logging:
       level: "{{ .Values.config.log.level }}"
     
