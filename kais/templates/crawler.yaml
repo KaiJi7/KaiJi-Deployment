@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+  template:
+    metadata:
+      annotations:
+      labels:
+    spec:
+      containers:
+        - name: crawler
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: Always
+          volumeMounts:
+          - name: config-volume
+            mountPath: /app/sports_data_crawler/configs
+          command: ['sleep', 'infinity']
+        volumes:
+          - name: config-volume
+            configMap:
+              name: crawler-conf

@@ -1,0 +1,29 @@
+# ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: crawl-conf
+  namespace: default
+data:
+  config.yaml: |
+    logging:
+      level: "{{ .Values.config.log.level }}"
+    
+    crawler:
+      dateFormat: '%Y%m%d'
+      urlPattern: https://www.playsport.cc/predictgame.php?action=scale&allianceid={game_type}&gametime={game_date}&sid={group_type}
+    
+    commander:
+      queryPeriod: {{ .Values.config.commander.queryPeriod }} # second
+      availableInterval: 365 # day
+      gameTypes:
+        - NBA
+        - MLB
+        - NPB
+
+    mongoDb:
+      db: kais
+      host: "{{ .Values.config.mongodb.host }}"
+      port: {{ .Values.config.mongodb.port }}
+      username: "{{ .Values.config.mongodb.username }}"
+      password: "{{ .Values.config.mongodb.password }}"

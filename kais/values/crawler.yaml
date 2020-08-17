@@ -1,0 +1,17 @@
+image:
+  repository: allensyk/sports_data_crawler
+  tag: 0.2.0
+
+config:
+  logging:
+    level: DEBUG
+
+  commander:
+    queryPeriod: 5 # second
+
+  mongoDb:
+    db: kais
+    host: localhost
+    port: 27017
+    username:
+    password:
