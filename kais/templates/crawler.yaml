@@ -6,10 +6,9 @@ metadata:
   name: crawler
 
 spec:
-  schedule: "* * * * *"
+  schedule: "{{ .Values.cronjob }}"
   jobTemplate:
     spec:
-            #replicas: 1
       template:
         metadata:
             labels:
