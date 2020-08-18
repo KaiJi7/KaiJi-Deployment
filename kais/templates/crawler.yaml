@@ -21,7 +21,7 @@ spec:
           volumeMounts:
             - name: config-volume
               mountPath: /app/sports_data_crawler/configs
-          command: ['sleep', 'infinity']
+          # command: ['sleep', 'infinity']
       volumes:
         - name: config-volume
           configMap:
