@@ -4,25 +4,28 @@ metadata:
   labels:
     run: crawler
   name: crawler
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      run: crawler
-  template:
-    metadata:
-        labels:
-          run: crawler
+
+schedule: "* * * * *"
+  jobTemplate:
     spec:
-      containers:
-        - name: crawler
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: Always
-          volumeMounts:
+      replicas: 1
+      selector:
+        matchLabels:
+          run: crawler
+      template:
+        metadata:
+            labels:
+              run: crawler
+        spec:
+          containers:
+            - name: crawler
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+              imagePullPolicy: Always
+              volumeMounts:
+                - name: config-volume
+                  mountPath: /app/sports_data_crawler/configs
+              # command: ['sleep', 'infinity']
+          volumes:
             - name: config-volume
-              mountPath: /app/sports_data_crawler/configs
-          # command: ['sleep', 'infinity']
-      volumes:
-        - name: config-volume
-          configMap:
-            name: crawler-conf
+              configMap:
+                name: crawler-conf
