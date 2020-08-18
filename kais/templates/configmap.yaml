@@ -12,7 +12,6 @@ data:
       level: "{{ .Values.config.log.level }}"
     
     crawler:
-      dateFormat: '%Y%m%d'
       urlPattern: https://www.playsport.cc/predictgame.php?action=scale&allianceid={game_type}&gametime={game_date}&sid={group_type}
     
     commander:

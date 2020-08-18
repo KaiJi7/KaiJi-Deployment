@@ -1,6 +1,6 @@
 image:
   repository: allensyk/sports_data_crawler
-  tag: 0.2.3
+  tag: 0.2.4
 
 config:
   log:
@@ -11,7 +11,7 @@ config:
 
   mongoDb:
     db: kais
-    host: mongodb.default.svc.cluster.local
+    host: 192.168.31.73
     port: 27017
     username: 
     password: 
