@@ -5,7 +5,8 @@ metadata:
     run: crawler
   name: crawler
 
-schedule: "* * * * *"
+spec:
+  schedule: "* * * * *"
   jobTemplate:
     spec:
       replicas: 1
