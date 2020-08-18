@@ -47,3 +47,17 @@ services:
     ports:
       - 8080:80
 
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    # environment:
+      # MONGO_INITDB_ROOT_USERNAME: allen
+      # MONGO_INITDB_ROOT_PASSWORD: password
+      # ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      # ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      # MONGO_INITDB_DATABASE: kais
+    ports:
+      - 27017:27017
+    volumes:
+      - '/home/allen/Temp:/data/db'
+
