@@ -60,4 +60,8 @@ services:
       - 27017:27017
     volumes:
       - '/home/allen/Temp:/data/db'
+    deploy:
+      restart_policy:
+        condition: always
+
 
