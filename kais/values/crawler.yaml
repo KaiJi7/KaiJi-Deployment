@@ -2,7 +2,7 @@ cronjob: "3 23 * * *"
 
 image:
   repository: allensyk/sports_data_crawler
-  tag: 0.2.4
+  tag: 0.2.5
 
 config:
   log:
