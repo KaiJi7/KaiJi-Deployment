@@ -6,6 +6,8 @@ Helm chart for the project KAIS.
 
 ### 1. MongoDB
 
+Make sure the mount point exist.
+
 ```
 $ docker-compose up -d mongodb
 ```
