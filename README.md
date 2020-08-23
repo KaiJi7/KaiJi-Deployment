@@ -6,7 +6,7 @@ Helm chart for the project KaiJi.
 
 ### 1. MongoDB
 
-Make sure the mount point exist.
+It's optional, in my case, I run mongoDb as container on the host and mount volume onto the host.
 
 ```
 $ docker-compose up -d mongodb
