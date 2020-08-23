@@ -1,8 +1,8 @@
 # Deployment
 
-Helm chart for the project KaiS.
+Helm chart for the project KaiJi.
 
-## Setup KaiS
+## Setup KaiJi
 
 ### 1. MongoDB
 
@@ -12,14 +12,14 @@ Make sure the mount point exist.
 $ docker-compose up -d mongodb
 ```
 
-### 2. Deploy [Crawler](https://github.com/AllenKd/sports_data_crawler)
+### 2. Deploy [Crawler](https://github.com/AllenKd/KaiJi-Crawler)
 
 ```
 $ helm install crawler -f crawler/values/crawler.yaml ./crawler/
 ```
 
-### 3. Deploy [Data Provider](https://github.com/AllenKd/dataProvider)
+### 3. Deploy [Data Provider](https://github.com/AllenKd/KaiJi-Data-Provider)
 
 ```
-$ helm install provider -f dateProvider/values/values.yaml ./dateProvider/
+$ helm install provider -f dataProvider/values/values.yaml ./dataProvider/
 ```
