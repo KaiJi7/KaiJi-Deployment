@@ -1,0 +1,26 @@
+# Default values for dateProvider.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replica: 1
+
+image:
+  repository: allensyk/data_provider
+  tag: 0.1.0
+
+service:
+  type: NodePort
+  port: 30080
+
+config:
+  mode: release
+
+  log:
+    level: DEBUG
+
+  mongo:
+    db: kais
+    host: 192.168.31.73
+    port: 27017
+    username:
+    password:

@@ -1,8 +1,8 @@
 # Deployment
 
-Helm chart for the project KAIS.
+Helm chart for the project KaiS.
 
-## Setup KAIS
+## Setup KaiS
 
 ### 1. MongoDB
 

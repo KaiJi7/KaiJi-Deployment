@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: data-provider
+  name: data-provider
+
+spec:
+  replicas: {{ .Values.replica }}
+  selector:
+    matchLabels:
+      run: data-provider
+  template:
+    metadata:
+      labels:
+        run: data-provider
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: config-volume
+              mountPath: /app/configs
+          ports:
+            - name: dp
+              containerPort: 8080
+              protocol: TCP
+      volumes:
+        - name: config-volume
+          configMap:
+            name: data-provider-conf
