@@ -1,0 +1,19 @@
+# ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: data-provider-conf
+  namespace: default
+data:
+  config.yaml: |
+    mode: "{{ .Values.config.mode }}"
+
+    log:
+      level: "{{ .Values.config.log.level }}"
+
+    mongo:
+      db: "{{ .Values.config.mongo.db }}"
+      host: "{{ .Values.config.mongo.host }}"
+      port: {{ .Values.config.mongo.port }}
+      username: "{{ .Values.config.mongo.username }}"
+      password: "{{ .Values.config.mongo.password }}"

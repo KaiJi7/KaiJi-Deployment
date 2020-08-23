@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-provider
+  labels:
+    run: data-provider
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  - name: data-provider
+    protocol: TCP
+    port: {{ .Values.service.port }}
+    targetPort: dp
+    nodePort: {{ .Values.service.port }}
+  selector:
+    run: data-provider
