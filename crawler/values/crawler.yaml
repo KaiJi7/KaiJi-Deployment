@@ -1,8 +1,8 @@
 cronjob: "3 23 * * *"
 
 image:
-  repository: allensyk/sports_data_crawler
-  tag: 0.2.6
+  repository: allensyk/kaiji-crawler
+  tag: 1.0.0
 
 config:
   log:
@@ -11,8 +11,8 @@ config:
   commander:
     queryPeriod: 5 # second
 
-  mongoDb:
-    db: kais
+  mongo:
+    db: kaiji
     host: 192.168.31.73
     port: 27017
     username: 
