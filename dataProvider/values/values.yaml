@@ -5,8 +5,8 @@
 replica: 1
 
 image:
-  repository: allensyk/data_provider
-  tag: 0.1.0
+  repository: allensyk/kaiji-data-provider
+  tag: 1.0.0
 
 service:
   type: NodePort
@@ -19,7 +19,7 @@ config:
     level: DEBUG
 
   mongo:
-    db: kais
+    db: kaiji
     host: 192.168.31.73
     port: 27017
     username:
