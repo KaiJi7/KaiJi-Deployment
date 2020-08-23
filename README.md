@@ -1,4 +1,4 @@
-# Deployment
+# KaiJi Deployment
 
 Helm chart for the project KaiJi.
 
