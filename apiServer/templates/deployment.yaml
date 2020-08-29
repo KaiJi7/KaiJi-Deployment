@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: data-provider
-  name: data-provider
+    run: api-server
+  name: api-server
 
 spec:
   replicas: {{ .Values.replica }}
   selector:
     matchLabels:
-      run: data-provider
+      run: api-server
   template:
     metadata:
       labels:
-        run: data-provider
+        run: api-server
     spec:
       containers:
         - name: {{ .Chart.Name }}
@@ -29,4 +29,4 @@ spec:
       volumes:
         - name: config-volume
           configMap:
-            name: data-provider-conf
+            name: api-server-conf

@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: data-provider
+  name: api-server
   labels:
-    run: data-provider
+    run: api-server
 spec:
   type: {{ .Values.service.type }}
   ports:
-  - name: data-provider
+  - name: api-server
     protocol: TCP
     port: {{ .Values.service.port }}
     targetPort: dp
     nodePort: {{ .Values.service.port }}
   selector:
-    run: data-provider
+    run: api-server
