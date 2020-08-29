@@ -21,5 +21,5 @@ $ helm install crawler -f crawler/values/local.yaml ./crawler/
 ### 3. Deploy [KaiJi API Server](https://github.com/AllenKd/KaiJi-API-Server)
 
 ```
-$ helm install provider -f dataProvider/values/local.yaml ./dataProvider/
+$ helm install api-server -f apiServer/values/local.yaml ./apiServer/
 ```
