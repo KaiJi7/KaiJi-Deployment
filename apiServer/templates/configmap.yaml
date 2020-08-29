@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: data-provider-conf
+  name: api-server-conf
   namespace: default
 data:
   config.yaml: |
