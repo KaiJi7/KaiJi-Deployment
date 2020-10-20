@@ -6,7 +6,7 @@ replica: 1
 
 image:
   repository: allensyk/kaiji-api-server
-  tag: 1.0.0
+  tag: 1.1.0
 
 service:
   type: NodePort
