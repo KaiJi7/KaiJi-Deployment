@@ -2,7 +2,7 @@ cronjob: "3 23 * * *"
 
 image:
   repository: allensyk/kaiji-crawler
-  tag: 1.2.0
+  tag: latest
 
 config:
   log:

@@ -1,3 +1,4 @@
+![](doc/logo.png)
 # KaiJi Deployment
 
 Helm chart for the project KaiJi.
