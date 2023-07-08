@@ -22,8 +22,5 @@ services:
       - 27017:27017
     volumes:
       - '/home/allen/.mount/mongodb:/data/db'
-    deploy:
-      restart_policy:
-        condition: always
 
 
